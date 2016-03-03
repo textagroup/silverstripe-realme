@@ -52,15 +52,6 @@ $config['realme-mts'] = array(
 
     'privatekey' => '{{mts-privatepemfile-signing}}',
     'saml.SOAPClient.certificate' => '{{mts-privatepemfile-mutual}}',
-    'saml.SOAPClient.ssl' => array(
-        'verify_peer' => true,
-        'verify_peer_name' => true,
-        'capture_peer_cert' => true,
-        'allow_self_signed' => false,
-        'verify_depth' => 5,
-        'peer_name' => 'as.mts.realme.govt.nz',
-        'cafile' => $_SERVER['DOCUMENT_ROOT']. "/mysite/certificate-bundle.pem"
-    )
 );
 
 // The password used to decrypt the signing key for MTS is only added if necessary
